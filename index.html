@@ -1,7 +1,7 @@
 <!-- 　
 ページ読込直後は、glbモデル非表示。
   クリックorタップorVRゴーグルのトリガーを引くとイベント（startExperience）発生し、BGM再生
-　5.0秒後に、anime01を表示
+　2秒後に、anime01を表示
   8.0秒後にanime02に切り替え   
   さらに7.0秒後にanime03に切り替え
   さらに5.6秒後にanime04に切り替え
@@ -32,12 +32,12 @@
     ></a-entity>
     
     <!-- 360度画像の背景 -->
-    <a-sky id="sky" src="R0010034.JPG" rotation="0 0 0"></a-sky>
-    
+    <a-sky id="sky" src="R0010222.JPG" .JPG
+    " rotation="0 0 0"></a-sky>
     <!-- 音声エンティティ -->
     <a-entity id="bgm" sound="src: url(bgm01.mp3); autoplay: false; loop: true;"></a-entity>
     <a-entity id="sound1" sound="src: url(anime.mp3); autoplay: false; loop: true;"></a-entity>
-    <a-entity id="sound2" sound="src: url(anime3.mp3); autoplay: false; loop: false;"></a-entity>
+    <a-entity id="sound2" sound="src: url(anime5.mp3); autoplay: false; loop: false;"></a-entity>
     <a-entity id="sound3" sound="src: url(animm.mp3); autoplay: false; loop: true;"></a-entity>
     <a-entity id="sound4" sound="src: url(animmj.mp3); autoplay: false; loop: false;"></a-entity>
     
@@ -92,9 +92,9 @@
         console.log('ユーザーアクションを検出しました。BGMを開始します。');
         bgmEl.components.sound.playSound();
         
-        // 5秒後にanime01を表示
+        // 10秒後にanime01を表示
         setTimeout(function() {
-          console.log('5秒経過しました。モデルを表示してアニメーション1(anime01)を開始します。');
+          console.log('10秒経過しました。モデルを表示してアニメーション1(anime01)を開始します。');
           modelEl.setAttribute('visible', true);
           // anime01を再生
           modelEl.setAttribute('animation-mixer', {clip: 'anime01',loop: 'false',repetitions: '2',timeScale: '1.15',clampWhenFinished: 'true'});
@@ -133,7 +133,7 @@
             window.location.href = 'index.html';
           }, 30000);
 
-        }, 5000); // 5秒後 anime01
+        }, 10000); // 10秒後 anime01
       }
     });
   </script>
